@@ -1,0 +1,174 @@
+:root {
+    --cor-principal: #2e7d32;
+    --cor-secundaria: #ff9800;
+    --cor-texto: #333;
+    --cor-fundo: #ffffff;
+    --cor-cinza-claro: #f5f5f5;
+}
+
+body {
+    background-color: var(--cor-cinza-claro);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--cor-texto);
+    margin: 0;
+    padding: 0;
+}
+
+/* Botão voltar */
+.voltar-home {
+    display: inline-block;
+    margin: 20px;
+    background-color: var(--cor-principal);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.voltar-home:hover {
+    background-color: #256428;
+}
+
+/* Sessão produto */
+.produto-detalhe {
+    padding: 40px 20px;
+}
+
+.produto-conteudo {
+    background-color: var(--cor-fundo);
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: auto;
+}
+
+.produto-imagem img {
+    width: 380px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.produto-info h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: var(--cor-principal);
+}
+
+.produto-info p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.produto-beneficios li {
+    margin-bottom: 6px;
+    font-size: 1rem;
+}
+
+.produto-preco {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: var(--cor-secundaria);
+    margin: 20px 0;
+}
+
+.btn {
+    background-color: var(--cor-principal);
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #256428;
+    transform: translateY(-2px);
+}
+
+/* Modal */
+.modal-overlay {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    padding: 20px;
+    z-index: 999;
+}
+
+.modal {
+    background: var(--cor-fundo);
+    padding: 25px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.fechar-x {
+    background: transparent;
+    font-size: 1.3rem;
+    color: var(--cor-texto);
+    padding: 0 5px;
+}
+
+.modal label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: 600;
+}
+
+.modal input,
+.modal select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.modal-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.confirmar {
+    background-color: var(--cor-secundaria);
+}
+
+.confirmar:hover {
+    background-color: #e68a00;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .produto-conteudo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .produto-imagem img {
+        width: 100%;
+    }
+}

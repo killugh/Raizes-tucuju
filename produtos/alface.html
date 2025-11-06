@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alface Crespa fresca da Feira do Agricultor Raízes Tucuju. Produto natural, crocante e direto do produtor.">
+    <title>Alface Crespa | Feira do Agricultor</title>
+    <link rel="stylesheet" href="produtos.css">
+    <link rel="shortcut icon" href="../logo.jpeg" type="image/x-icon">
+</head>
+<body>
+    <!-- Botão Voltar -->
+    <a href="../index.html" class="btn voltar-home">← Voltar para Home</a>
+
+    <!-- Produto: Alface Crespa -->
+    <section class="produto-detalhe" id="produto-alface">
+        <div class="container">
+            <div class="produto-conteudo">
+                <div class="produto-imagem">
+                    <img src="https://th.bing.com/th/id/R.2a2b81f7609089253d70c703f8456815?rik=%2fTCndgawuX7F9g&pid=ImgRaw&r=0" alt="Alface crespa fresca e verde em exposição">
+                </div>
+                <div class="produto-info">
+                    <h1>Alface Crespa</h1>
+                    <p>Alface fresquinha, colhida diariamente para garantir sabor, crocância e qualidade.</p>
+                    <ul class="produto-beneficios">
+                        <li>🌿 Fresquinha e crocante</li>
+                        <li>🥗 Ideal para saladas e sanduíches</li>
+                        <li>👩‍🌾 Produção familiar local</li>
+                    </ul>
+
+                    <div class="produto-preco">R$ 3,50/unidade</div>
+                    <button class="btn" id="btn-comprar" data-produto="Alface Crespa">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Compra -->
+    <div class="modal-overlay" id="modal-compra" role="dialog" aria-modal="true" aria-labelledby="titulo-modal-compra">
+        <div class="modal">
+            <div class="modal-header">
+                <h2 id="titulo-modal-compra">Finalizar Pedido</h2>
+                <button id="fechar-modal" class="btn fechar-x" aria-label="Fechar janela de compra">×</button>
+            </div>
+
+            <label for="quantidade">Quantidade (unidade):</label>
+            <input type="number" id="quantidade" min="1" step="1" value="1">
+
+            <label for="pagamento">Forma de Pagamento:</label>
+            <select id="pagamento">
+                <option>Dinheiro</option>
+                <option>Pix</option>
+                <option>Cartão de Débito</option>
+                <option>Cartão de Crédito</option>
+            </select>
+
+            <div class="modal-buttons">
+                <button id="finalizar-pedido" class="btn confirmar">Finalizar Pedido</button>
+                <button id="cancelar-pedido" class="btn fechar-modal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

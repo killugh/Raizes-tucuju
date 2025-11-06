@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tomates Orgânicos - Feira do Agricultor Raízes Tucuju. Produto fresco, natural e direto do produtor.">
+    <title>Tomates Orgânicos | Feira do Agricultor</title>
+    <link rel="stylesheet" href="produtos.css">
+    <link rel="shortcut icon" href="../logo.jpeg" type="image/x-icon">
+</head>
+<body>
+    <!-- Botão Voltar -->
+    <a href="../index.html" class="btn voltar-home">← Voltar para Home</a>
+
+    <!-- Produto: Tomates Orgânicos -->
+    <section class="produto-detalhe" id="produto-tomate">
+        <div class="container">
+            <div class="produto-conteudo">
+                <div class="produto-imagem">
+                    <img src="https://tse4.mm.bing.net/th/id/OIP.WOD4LaSQTer54ovr5JFygAHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Tomates orgânicos vermelhos frescos em exposição">
+                </div>
+                <div class="produto-info">
+                    <h1>Tomates Orgânicos</h1>
+                    <p>Tomates cultivados de forma totalmente natural, sem uso de agrotóxicos e colhidos no ponto ideal para garantir sabor, frescor e qualidade.</p>
+                    <ul class="produto-beneficios">
+                        <li>🍅 100% livre de agrotóxicos</li>
+                        <li>🌱 Cultivo sustentável</li>
+                        <li>🏡 Produção familiar local</li>
+                    </ul>
+
+                    <div class="produto-preco">R$ 8,90/kg</div>
+                    <button class="btn" id="btn-comprar" data-produto="Tomates Orgânicos">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Compra -->
+    <div class="modal-overlay" id="modal-compra" role="dialog" aria-modal="true" aria-labelledby="titulo-modal-compra">
+        <div class="modal">
+            <div class="modal-header">
+                <h2 id="titulo-modal-compra">Finalizar Pedido</h2>
+                <button id="fechar-modal" class="btn fechar-x" aria-label="Fechar janela de compra">×</button>
+            </div>
+
+            <label for="quantidade">Quantidade (kg):</label>
+            <input type="number" id="quantidade" min="0.5" step="0.5" value="1">
+
+            <label for="pagamento">Forma de Pagamento:</label>
+            <select id="pagamento">
+                <option>Dinheiro</option>
+                <option>Pix</option>
+                <option>Cartão de Débito</option>
+                <option>Cartão de Crédito</option>
+            </select>
+
+            <div class="modal-buttons">
+                <button id="finalizar-pedido" class="btn confirmar">Finalizar Pedido</button>
+                <button id="cancelar-pedido" class="btn fechar-modal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>
