@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cenouras Frescas da Feira do Agricultor Raízes Tucuju. Ricas em vitaminas e perfeitas para diversas receitas.">
+    <title>Cenouras Frescas | Feira do Agricultor</title>
+    <link rel="stylesheet" href="produtos.css">
+    <link rel="shortcut icon" href="../logo.jpeg" type="image/x-icon">
+</head>
+<body>
+    <!-- Botão Voltar -->
+    <a href="../index.html" class="btn voltar-home">← Voltar para Home</a>
+
+    <!-- Produto: Cenouras Frescas -->
+    <section class="produto-detalhe" id="produto-cenoura">
+        <div class="container">
+            <div class="produto-conteudo">
+                <div class="produto-imagem">
+                    <img src="https://th.bing.com/th/id/R.5c602eb27b8f346d3375b983e375f0a6?rik=Hb%2bCW5qGNc%2bkzw&riu=http%3a%2f%2fsouagro.com.br%2fwp-content%2fuploads%2f2018%2f01%2freceita_com_cenoura_352889045.jpg&ehk=stSpmfxV6upm1LsH7xe5sxWSaN6B8vujVCMyt2ixkaM%3d&risl=&pid=ImgRaw&r=0" alt="Cenouras frescas e crocantes">
+                </div>
+                <div class="produto-info">
+                    <h1>Cenouras Frescas</h1>
+                    <p>Cenouras crocantes, doces e ricas em nutrientes. Ideais para saladas, sucos, cozidos e diversas receitas saudáveis.</p>
+                    <ul class="produto-beneficios">
+                        <li>🥕 Rica em vitamina A</li>
+                        <li>🌱 Fresca e crocante</li>
+                        <li>👩‍🌾 Produção familiar local</li>
+                    </ul>
+
+                    <div class="produto-preco">R$ 6,20/kg</div>
+                    <button class="btn" id="btn-comprar" data-produto="Cenouras Frescas">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Compra -->
+    <div class="modal-overlay" id="modal-compra" role="dialog" aria-modal="true" aria-labelledby="titulo-modal-compra">
+        <div class="modal">
+            <div class="modal-header">
+                <h2 id="titulo-modal-compra">Finalizar Pedido</h2>
+                <button id="fechar-modal" class="btn fechar-x" aria-label="Fechar janela de compra">×</button>
+            </div>
+
+            <label for="quantidade">Quantidade (kg):</label>
+            <input type="number" id="quantidade" min="0.5" step="0.5" value="1">
+
+            <label for="pagamento">Forma de Pagamento:</label>
+            <select id="pagamento">
+                <option>Dinheiro</option>
+                <option>Pix</option>
+                <option>Cartão de Débito</option>
+                <option>Cartão de Crédito</option>
+            </select>
+
+            <div class="modal-buttons">
+                <button id="finalizar-pedido" class="btn confirmar">Finalizar Pedido</button>
+                <button id="cancelar-pedido" class="btn fechar-modal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>
