@@ -314,4 +314,58 @@
     .banner h2 { font-size: 1.6rem; }
     .product-card { margin: 0 10px; }
     nav ul { flex-direction: column; }
-}        
+}
+
+/* Barra de Pesquisa */
+.barra-pesquisa {
+    background-color: #f1f8e9; /* BX2 */
+    padding: 20px 0;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 8px 12px;
+    border-radius: 25px; /* ST2: arredondado */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.search-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+.search-box button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: transform 0.2s;
+}
+
+.search-box button:hover {
+    transform: scale(1.1);
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    .search-box {
+        max-width: 90%;
+    }
+}
+
+/* Mensagem de Nenhum Produto Encontrado */
+.msg-nenhum-produto {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #555;
+    margin-top: 15px;
+    padding: 10px;
+}

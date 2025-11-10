@@ -28,6 +28,17 @@
         </div>
     </header>
 
+        <!-- Barra de Pesquisa -->
+    <section class="barra-pesquisa">
+        <div class="container">
+            <div class="search-box">
+                <input type="text" id="campo-pesquisa" placeholder="Buscar produtos..." aria-label="Buscar produtos">
+                <button id="btn-pesquisar" aria-label="Pesquisar"><span>🔍</span></button>
+            </div>
+        </div>
+    </section>
+
+
     <!-- Banner Principal -->
     <section class="banner" role="region" aria-label="Banner principal apresentando a feira do agricultor">
         <div class="container">
@@ -41,6 +52,10 @@
     <section id="produtos" role="region" aria-labelledby="titulo-produtos">
         <div class="container">
             <h2 class="section-title" id="titulo-produtos">Nossos Produtos</h2>
+            <p id="mensagem-nenhum-produto" class="msg-nenhum-produto" style="display: none;">
+                Nenhum produto encontrado.
+            </p>
+
             <div class="products-grid" role="list">
 
                 <!-- Produto 1 -->
@@ -52,7 +67,7 @@
                         <h3 class="product-title">Tomates Orgânicos</h3>
                         <p class="product-description">Cultivados sem agrotóxicos, colhidos no ponto ideal de maturação. Perfeitos para saladas e molhos.</p>
                         <div class="product-price">R$ 8,90/kg</div>
-                        <a href="produtos/tomate.html" class="btn" aria-label="Comprar tomates orgânicos">Comprar</a>
+                        <a href="produtos/tomate.html" class="btn" aria-label="Comprar tomates orgânicos" rel="next">Comprar</a>
                     </div>
                 </div>
  
@@ -65,7 +80,7 @@
                         <h3 class="product-title">Alface Crespa</h3>
                         <p class="product-description">Alface fresquinha, colhida diariamente. Ideal para saladas e sanduíches saudáveis.</p>
                         <div class="product-price">R$ 3,50/unidade</div>
-                        <a href="produtos/alface.html" class="btn">Comprar</a>
+                        <a href="produtos/alface.html" class="btn" rel="next">Comprar</a>
                     </div>
                 </div>
                 
@@ -78,7 +93,7 @@
                         <h3 class="product-title">Laranjas Pera</h3>
                         <p class="product-description">Laranjas doces e suculentas, perfeitas para sucos naturais ou consumo direto.</p>
                         <div class="product-price">R$ 5,90/kg</div>
-                        <a href="produtos/lajanja.html" class="btn">Comprar</a>
+                        <a href="produtos/lajanja.html" class="btn" rel="next">Comprar</a>
                     </div>
                 </div>
                 
@@ -91,7 +106,7 @@
                         <h3 class="product-title">Batatas Inglesas</h3>
                         <p class="product-description">Batatas selecionadas, ideais para cozinhar, assar ou fritar. Ótima fonte de carboidratos.</p>
                         <div class="product-price">R$ 4,50/kg</div>
-                        <a href="produtos/batata.html" class="btn">Comprar</a>
+                        <a href="produtos/batata.html" class="btn" rel="next">Comprar</a>
                     </div>
                 </div>
                 
@@ -104,7 +119,7 @@
                         <h3 class="product-title">Cenouras Frescas</h3>
                         <p class="product-description">Cenouras crocantes e doces, ricas em vitamina A. Perfeitas para saladas e cozidos.</p>
                         <div class="product-price">R$ 6,20/kg</div>
-                        <a href="produtos/cenoura.html" class="btn">Comprar</a>
+                        <a href="produtos/cenoura.html" class="btn" rel="next">Comprar</a>
                     </div>
                 </div>
                 
@@ -117,7 +132,7 @@
                         <h3 class="product-title">Morangos Selecionados</h3>
                         <p class="product-description">Morangos doces e suculentos, colhidos no ponto certo. Ideal para sobremesas e vitaminas.</p>
                         <div class="product-price">R$ 12,90/caixa</div>
-                        <a href="produtos/morango.html" class="btn">Comprar</a>
+                        <a href="produtos/morango.html" class="btn" rel="next">Comprar</a>
                     </div>
                 </div>
             </div>
@@ -211,9 +226,10 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2023 Feira da Agricultura. Todos os direitos reservados.</p>
+                <p>&copy; 2025 Feira do Agricultor. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
