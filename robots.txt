@@ -1,0 +1,9 @@
+# robots.txt - Feira do Agricultor Raízes Tucuju
+# Permite que todos os mecanismos de busca indexem o site.
+
+User-agent: *
+Allow: /
+
+# Indica ao Google o caminho do sitemap.xml
+Sitemap: https://killugh.github.io/Raizes-tucuju/sitemap.xml
+google-site-verification=jG7oLhyGTU31ZD776NdLE3JAcI_HHjNdOwkMgalMCOs
