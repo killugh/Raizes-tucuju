@@ -118,3 +118,27 @@ if (campoPesquisa) {
         }
     }
 }
+
+// ====== FILTRO DE CATEGORIAS ======
+const botoesCategoria = document.querySelectorAll(".btn-categoria");
+const produtos = document.querySelectorAll(".product-card");
+
+botoesCategoria.forEach(botao => {
+    botao.addEventListener("click", () => {
+        // Remove a classe ativo dos outros botões
+        botoesCategoria.forEach(b => b.classList.remove("ativo"));
+        botao.classList.add("ativo");
+
+        const categoria = botao.getAttribute("data-categoria");
+
+        produtos.forEach(produto => {
+            const categoriaProduto = produto.getAttribute("data-categoria");
+
+            if (categoria === "todos" || categoriaProduto === categoria) {
+                produto.style.display = "block";
+            } else {
+                produto.style.display = "none";
+            }
+        });
+    });
+});

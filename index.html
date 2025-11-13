@@ -87,10 +87,18 @@
                 Nenhum produto encontrado.
             </p>
 
+                <!-- Menu de Categorias -->
+            <div class="category-menu">
+                <button class="btn-categoria ativo" data-categoria="todos">Todos</button>
+                <button class="btn-categoria" data-categoria="frutas">Frutas</button>
+                <button class="btn-categoria" data-categoria="legumes">Legumes</button>
+                <button class="btn-categoria" data-categoria="verduras">Verduras</button>
+            </div>
+
             <div class="products-grid" role="list">
 
                 <!-- Produto 1 -->
-                <div class="product-card" role="listitem" aria-label="Tomates Orgânicos">
+                <div class="product-card" role="listitem" aria-label="Tomates Orgânicos" data-categoria="legumes">
                     <div class="product-image">
                         <img src="https://tse4.mm.bing.net/th/id/OIP.WOD4LaSQTer54ovr5JFygAHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Tomates orgânicos vermelhos frescos em exposição">
                     </div>
@@ -103,7 +111,7 @@
                 </div>
  
                 <!-- Produto 2 -->
-                <div class="product-card">
+                <div class="product-card" data-categoria="verduras">
                     <div class="product-image">
                         <img src="https://th.bing.com/th/id/R.2a2b81f7609089253d70c703f8456815?rik=%2fTCndgawuX7F9g&pid=ImgRaw&r=0" alt="Alface Crespa">
                     </div>
@@ -116,7 +124,7 @@
                 </div>
                 
                 <!-- Produto 3 -->
-                <div class="product-card">
+                <div class="product-card" data-categoria="frutas">
                     <div class="product-image">
                         <img src="https://tse1.mm.bing.net/th/id/OIP.Ubs6l_GQ1kiS-FphkngzkQHaER?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Laranjas Doces">
                     </div>
@@ -129,7 +137,7 @@
                 </div>
                 
                 <!-- Produto 4 -->
-                <div class="product-card">
+                <div class="product-card" data-categoria="legumes">
                     <div class="product-image">
                         <img src="https://th.bing.com/th/id/R.29ec3a670ac29ef2fd9446bdeac8bf8f?rik=%2b8GhDQCGBer3KA&pid=ImgRaw&r=0" alt="Batatas">
                     </div>
@@ -142,7 +150,7 @@
                 </div>
                 
                 <!-- Produto 5 -->
-                <div class="product-card">
+                <div class="product-card" data-categoria="legumes">
                     <div class="product-image">
                         <img src="https://th.bing.com/th/id/R.5c602eb27b8f346d3375b983e375f0a6?rik=Hb%2bCW5qGNc%2bkzw&riu=http%3a%2f%2fsouagro.com.br%2fwp-content%2fuploads%2f2018%2f01%2freceita_com_cenoura_352889045.jpg&ehk=stSpmfxV6upm1LsH7xe5sxWSaN6B8vujVCMyt2ixkaM%3d&risl=&pid=ImgRaw&r=0" alt="Cenouras">
                     </div>
@@ -155,7 +163,7 @@
                 </div>
                 
                 <!-- Produto 6 -->
-                <div class="product-card">
+                <div class="product-card" data-categoria="frutas">
                     <div class="product-image">
                         <img src="https://tse1.mm.bing.net/th/id/OIP.rTXKB_vZ46fJJuJA83nUjgHaE9?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Morango">
                     </div>
