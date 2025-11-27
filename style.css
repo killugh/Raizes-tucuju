@@ -69,7 +69,7 @@
         
         /* Banner */
         .banner {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://source.unsplash.com/random/1200x600/?farm,fresh');
+            background: #7ab366;
             background-size: cover;
             background-position: center;
             color: white;
@@ -208,25 +208,71 @@
         }
         
         /* Informações de contato */
-        .contact-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 30px;
+        .about-section {
+            padding: 60px 20px;
+            background-color: #ffffff;
         }
-        
-        .contact-item {
-            background-color: white;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+
+        .about-section h2 {
             text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #1a1a1a;
         }
-        
-        .contact-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            color: #2e7d32;
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 24px;
+            color: #5a8a47;
+            margin-bottom: 16px;
+        }
+
+        .about-text p {
+            color: #9ca3af;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .features-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .features-list li {
+            color: #1a1a1a;
+            font-weight: 500;
+        }
+
+        .about-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .info-card {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #5a8a47;
+        }
+
+        .info-card h3 {
+            color: #5a8a47;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        .info-card p {
+            color: #9ca3af;
+            font-size: 14px;
         }
         
         /* Rodapé */
@@ -318,7 +364,7 @@
 
 /* Barra de Pesquisa */
 .barra-pesquisa {
-    background-color: #f1f8e9; /* BX2 */
+    background-color: #7ab366; /* BX2 */
     padding: 20px 0;
 }
 
