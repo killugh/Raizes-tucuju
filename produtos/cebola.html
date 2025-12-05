@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cebola fresca da Feira do Agricultor Raízes Tucuju. Produto natural, crocante e direto do produtor.">
+    <title>Cebola | Feira do Agricultor</title>
+    <link rel="stylesheet" href="produtos.css">
+    <link rel="shortcut icon" href="../logo.png" type="image/x-icon">
+    <link rel="canonical" href="https://killugh.github.io/Raizes-tucuju/produtos/alface.html">
+</head>
+<body>
+    <!-- Botão Voltar -->
+    <a href="../index.html" class="btn voltar-home" rel="prev">← Voltar para Home</a>
+
+    <section class="produto-detalhe" id="produto-alface">
+        <div class="container">
+            <div class="produto-conteudo">
+                <div class="produto-imagem">
+                    <img src="../cebola.jpeg" alt="Cebola fresca">
+                </div>
+                <div class="produto-info">
+                    <h1>Cebola</h1>
+                    <p>Cebola</p>
+                    <ul class="produto-beneficios">
+                        <li></li>
+                    </ul>
+
+                    <div class="produto-preco">R$ 4,00/Kg</div>
+                    <button class="btn" id="btn-comprar" data-produto="Cebola">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Compra -->
+    <div class="modal-overlay" id="modal-compra" role="dialog" aria-modal="true" aria-labelledby="titulo-modal-compra">
+        <div class="modal">
+            <div class="modal-header">
+                <h2 id="titulo-modal-compra">Finalizar Pedido</h2>
+                <button id="fechar-modal" class="btn fechar-x" aria-label="Fechar janela de compra">×</button>
+            </div>
+
+            <label for="quantidade">Quantidade (Kg):</label>
+            <input type="number" id="quantidade" min="1" step="1" value="1">
+
+            <label for="pagamento">Forma de Pagamento:</label>
+            <select id="pagamento">
+                <option>Dinheiro</option>
+                <option>Pix</option>
+                <option>Cartão de Débito</option>
+                <option>Cartão de Crédito</option>
+            </select>
+
+            <div class="modal-buttons">
+                <button id="finalizar-pedido" class="btn confirmar">Finalizar Pedido</button>
+                <button id="cancelar-pedido" class="btn fechar-modal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>
