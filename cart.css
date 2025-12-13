@@ -1,0 +1,136 @@
+/* cart.css - Estilo da Página do Carrinho */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #f8f9fa;
+    color: #333;
+}
+
+/* Header */
+.cart-header {
+    background: #2e7d32;
+    color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.cart-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-header h1 {
+    font-size: 1.8rem;
+}
+
+.cart-header .voltar {
+    background: #ff9800;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.cart-header .voltar:hover {
+    background: #f57c00;
+}
+
+/* Área do Carrinho */
+.cart-section {
+    padding: 40px 0;
+}
+
+.cart-items {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cart-item-info {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.cart-item-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+.cart-item-qty {
+    margin-top: 8px;
+    color: #555;
+}
+
+.cart-item-remove {
+    background: #d32f2f;
+    color: white;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.cart-item-remove:hover {
+    background: #b71c1c;
+}
+
+/* Resumo */
+.cart-summary {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.cart-summary h2 {
+    color: #2e7d32;
+    margin-bottom: 20px;
+}
+
+.cart-summary .btn.finalizar {
+    width: 100%;
+    background: #2e7d32;
+    color: white;
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.cart-summary .btn.finalizar:hover {
+    background: #1b5e20;
+}

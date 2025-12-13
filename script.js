@@ -17,7 +17,10 @@ const finalizarPedidoBtn = document.querySelector("#finalizar-pedido");
 const inputQuantidade = document.querySelector("#quantidade");
 const selectPagamento = document.querySelector("#pagamento");
 
-let produtoSelecionado = ""; // Guarda o nome do produto selecionado
+// Variáveis globais
+let produtoSelecionado = "";
+let precoSelecionado = 0;
+let imagemSelecionada = "";
 
 // ------------------------------------------------------------
 // FUNÇÃO: Abrir Modal ao clicar no botão "Comprar"
@@ -25,6 +28,9 @@ let produtoSelecionado = ""; // Guarda o nome do produto selecionado
 if (btnComprar) {
     btnComprar.addEventListener("click", (e) => {
         produtoSelecionado = e.target.getAttribute("data-produto");
+        precoSelecionado = Number(e.target.getAttribute("data-preco"));
+        imagemSelecionada = e.target.getAttribute("data-imagem");
+
         modal.style.display = "flex";
         inputQuantidade.focus();
     });
@@ -41,42 +47,39 @@ if (fecharModalBtn) fecharModalBtn.addEventListener("click", fecharModal);
 if (cancelarPedidoBtn) cancelarPedidoBtn.addEventListener("click", fecharModal);
 
 // ------------------------------------------------------------
-// FUNÇÃO: Finalizar Pedido → WhatsApp
+// FUNÇÃO: Adicionar ao Carrinho
 // ------------------------------------------------------------
-function enviarPedidoWhatsApp() {
-    const quantidade = inputQuantidade.value;
+function adicionarAoCarrinho() {
+    const quantidade = Number(inputQuantidade.value);
     const pagamento = selectPagamento.value;
 
     if (!quantidade || quantidade <= 0) {
-        alert("Por favor, informe uma quantidade válida.");
+        alert("Informe uma quantidade válida.");
         return;
     }
 
+    const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+    carrinho.push({
+        nome: produtoSelecionado,
+        quantidade: quantidade,
+        pagamento: pagamento,
+        preco: precoSelecionado,
+        imagem: imagemSelecionada
+    });
+
+    localStorage.setItem("carrinho", JSON.stringify(carrinho));
+
     fecharModal();
 
-    // Exibe mensagem de confirmação (CONF2)
-    setTimeout(() => {
-        alert("🍃 Seu pedido foi enviado! Vamos te atender pelo WhatsApp 📩");
-    }, 300);
-
-    // Criação da mensagem (MSG2)
-    const mensagem = `Olá! Gostaria de fazer um pedido:%0A• Produto: ${produtoSelecionado}%0A• Quantidade: ${quantidade}%0A• Pagamento: ${pagamento}`;
-    const url = `https://wa.me/${numeroWhatsApp}?text=${mensagem}`;
-
-    // Abre o WhatsApp após a confirmação
-    setTimeout(() => {
-        window.open(url, "_blank");
-    }, 600);
+    alert("🛒 Produto adicionado ao carrinho!");
 }
 
-if (finalizarPedidoBtn) finalizarPedidoBtn.addEventListener("click", enviarPedidoWhatsApp);
+if (finalizarPedidoBtn) {
+    finalizarPedidoBtn.addEventListener("click", adicionarAoCarrinho);
+}
 
-// ENTER1 - Pressionar Enter finaliza o pedido
-window.addEventListener("keydown", (e) => {
-    if (modal && modal.style.display === "flex" && e.key === "Enter") {
-        enviarPedidoWhatsApp();
-    }
-});
+
 
 // ------------------------------------------------------------
 // SISTEMA DE BUSCA NO INDEX (UP2 + UP3)
@@ -142,3 +145,36 @@ botoesCategoria.forEach(botao => {
         });
     });
 });
+
+// ------------------------------------------------------------
+// SISTEMA DE CARRINHO (JS4)
+// ------------------------------------------------------------
+
+// Carregar carrinho existente ou criar novo
+let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+// Botões que adicionam ao carrinho (em cada página de produto)
+const btnAdicionarCarrinho = document.querySelector(".abrir-modal");
+
+if (btnAdicionarCarrinho) {
+    btnAdicionarCarrinho.addEventListener("click", () => {
+        const nome = btnAdicionarCarrinho.getAttribute("data-produto");
+        const imagem = document.querySelector(".produto-imagem img").src;
+        const preco = parseFloat(
+            document.querySelector(".produto-preco").textContent.replace("R$", "").replace(",", ".")
+        );
+        const quantidade = parseFloat(inputQuantidade.value);
+
+        // Salva no carrinho
+        carrinho.push({
+            nome: nome,
+            imagem: imagem,
+            preco: preco,
+            quantidade: quantidade
+        });
+
+        localStorage.setItem("carrinho", JSON.stringify(carrinho));
+
+        alert("🛒 Produto adicionado ao carrinho com sucesso!");
+    });
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho | Raízes Tucuju</title>
+    <link rel="stylesheet" href="cart.css">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <script src="carrinho.js" defer></script>
+</head>
+<body>
+
+    <header class="cart-header">
+        <div class="container">
+            <h1>🛒 Meu Carrinho</h1>
+            <a href="index.html" class="btn voltar">← Voltar</a>
+        </div>
+    </header>
+
+    <section class="cart-section">
+        <div class="container">
+            <div id="cart-items" class="cart-items">
+                <!-- Itens do carrinho gerados via JS -->
+            </div>
+
+            <div class="cart-summary">
+                <h2>Resumo do Pedido</h2>
+                <p>Total: <span id="cart-total">R$ 0,00</span></p>
+                <button class="btn finalizar">Finalizar Compra</button>
+            </div>
+        </div>
+    </section>
+
+    
+
+</body>
+</html>

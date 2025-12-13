@@ -516,3 +516,19 @@
     background-color: #2e7d32;
     color: white;
 }
+
+/* Botão Carrinho */
+.btn-carrinho {
+    background-color: #ff9800;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white !important;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-carrinho:hover {
+    background-color: #f57c00;
+    transform: scale(1.05);
+}
